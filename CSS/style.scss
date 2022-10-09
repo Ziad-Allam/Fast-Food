@@ -1,0 +1,1289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+$green: #27ae60;
+$black: #130f40;
+$white: #fff;
+$light-color: #666;
+$light-bg: #f7f7f7;
+$border: .1rem solid rgba(0, 0, 0, .2);
+$box-shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
+
+
+
+//////////////////////// MIXIN ////////////////////////
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+@mixin font($size) {
+    font-family: 'Satisfy', cursive;
+    font-size: $size;
+    color: $green;
+}
+
+
+
+
+
+
+
+
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .7rem 1.8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: $white;
+    background: $green;
+    border-radius: .5rem;
+
+    &:hover {
+        background: $black;
+    }
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    span {
+        @include font(3rem)
+    }
+
+    h3 {
+        font-size: 3rem;
+        color: $black;
+    }
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $green;
+        border-radius: 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+//////////////////////// HEADER //////////////////////// 
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: $box-shadow;
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: $black;
+
+        i {
+            padding-right: .5rem;
+            color: $green;
+        }
+    }
+
+    .navbar {
+        a {
+            font-size: 1.7rem;
+            margin: 0 1rem;
+            color: $light-color;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    .icons div {
+        background-color: $light-bg;
+        color: $black;
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: .5rem;
+        margin-left: .3rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+            background-color: $green;
+        }
+    }
+
+}
+
+#menu-btn {
+    display: none;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-container {
+    position: fixed;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    height: calc(100vh - 8.5rem);
+    display: none;
+    z-index: 1000;
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+
+    form {
+        height: 7rem;
+        border-bottom: .2px solid $black;
+        background-color: $white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        animation: fadeUp .4s linear;
+
+        input {
+            height: 100%;
+            width: 100%;
+            font-size: 1.7rem;
+            color: $black;
+            text-transform: none;
+            padding-right: 1rem;
+        }
+
+        label {
+            font-size: 3rem;
+            color: $black;
+            cursor: pointer;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.shopping-cart-container {
+    position: fixed;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    height: calc(100vh - 8.5rem);
+    overflow-y: scroll;
+    padding-bottom: 8rem;
+    display: none;
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $black;
+        border-radius: 5rem;
+    }
+
+    .products-container {
+        border: $border;
+        border-radius: .5rem;
+        animation: fadeUp .4s linear;
+
+
+        .order-header {
+            text-align: center;
+            font-size: 2.5rem;
+            border-bottom: $border;
+            padding: 1rem;
+        }
+
+        .box-container {
+            @include grid(30rem);
+            padding: 1.5rem;
+
+            .box {
+                background-color: $light-bg;
+                border-radius: .5rem;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 2rem;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: $black;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+
+                img {
+                    height: 8rem;
+                }
+
+                .content {
+
+                    h3 {
+                        font-size: 2rem;
+                        color: $black;
+                    }
+
+                    .quantity-box {
+
+                        span {
+                            font-size: 1.5rem;
+                            color: $light-color;
+                        }
+
+                        input {
+                            width: 8rem;
+                            padding: .5rem 1.2rem;
+                            font-size: 1.5rem;
+                            color: $black;
+                            margin: .7rem 0;
+                        }
+                    }
+
+                    .price-box {
+
+                        span {
+                            font-size: 1.7rem;
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-total {
+        margin-top: 2rem;
+        border: $border;
+        border-radius: .5rem;
+        animation: fadeUp .4s linear .4s backwards;
+
+        .cart-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            border-bottom: $border;
+            padding: 1rem;
+
+        }
+
+        .box {
+            padding: 1.5rem;
+
+            h3 {
+                color: $black;
+                font-size: 2rem;
+                padding-bottom: .7rem;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.login-container {
+    position: fixed;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    height: calc(100vh - 8.5rem);
+    // overflow-y: scroll;
+    // padding-bottom: 8rem;
+    display: none;
+    padding: 0 2rem;
+    z-index: 1000;
+
+    &.active {
+        display: block;
+    }
+
+    form {
+        margin: 2rem auto;
+        max-width: 40rem;
+        box-shadow: $box-shadow;
+        border: $border;
+        padding: 2rem;
+        border-radius: .5rem;
+        animation: fadeUp .4s linear;
+
+        h3 {
+            padding-bottom: 1rem;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: $black;
+            text-align: center;
+        }
+
+        .box {
+            margin: .7rem 0;
+            border-radius: .5rem;
+            background-color: $light-bg;
+            padding: 1rem 1.2rem;
+            font-size: 1.6rem;
+            color: $black;
+            text-transform: none;
+            width: 100%;
+        }
+
+        .remember {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label {
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: $light-color;
+            }
+        }
+
+        .btn {
+            margin: 1rem 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            color: $light-color;
+
+            a {
+                color: $green;
+
+                &:hover {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+//////////////////////// HOME //////////////////////// 
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    .left-side {
+        flex: 1 1 41rem;
+
+        span {
+            font-size: 2rem;
+            color: $green;
+        }
+
+        h3 {
+            font-size: 4rem;
+            color: $black;
+            padding-top: 1rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+    }
+
+    .right-side {
+        flex: 1 1 41rem;
+        margin: 2rem 0;
+        pointer-events: none;
+
+        .home-img {
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+        .home-parallax {
+            position: absolute;
+            top: -10rem;
+            right: -10rem;
+            width: 80vw;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.category {
+    @include grid(16rem);
+    padding-bottom: 5rem;
+
+    .box {
+        background-color: $light-bg;
+        border-radius: .5rem;
+        text-align: center;
+        padding: 2rem;
+
+        img {
+            height: 7rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: $black;
+        }
+
+        &:hover {
+            background-color: $green;
+
+            h3 {
+                color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+.about {
+    background-color: $light-bg;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+
+    .about-left-side {
+        flex: 1 1 41rem;
+
+        .about-img {
+            width: 100%;
+        }
+    }
+
+    .about-right-side {
+        flex: 1 1 41rem;
+
+        span {
+            @include font(3rem)
+        }
+
+        h3 {
+            font-size: 3rem;
+            padding-top: .5rem;
+            color: $black;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+
+        .about-services {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            gap: 1.5rem;
+
+            div {
+                flex: 1 1 20rem;
+                background-color: $white;
+                border-radius: .5rem;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                padding: 2rem;
+                box-shadow: $box-shadow;
+
+                p {
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    color: $black;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popular {
+
+    .card-container {
+        @include grid(25rem);
+
+        .card {
+            background-color: $light-bg;
+            border-radius: .5rem;
+            padding: 2rem;
+            position: relative;
+            text-align: center;
+
+            .fa-heart {
+                position: absolute;
+                font-size: 2.5rem;
+                right: 1.5rem;
+                top: 1.5rem;
+                color: $light-color;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            .image {
+                margin: 1rem 0;
+
+                img {
+                    height: 15rem;
+                }
+            }
+
+            .content {
+                h3 {
+                    font-size: 2rem;
+                    color: $black;
+                }
+
+                .stars {
+                    font-size: 1.7rem;
+                    padding: 1rem 0;
+
+                    i {
+                        color: gold;
+                    }
+                }
+
+                .price {
+                    font-size: 2rem;
+                    color: $black;
+
+                    span {
+                        font-size: 1.5rem;
+                        color: $light-color;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.banner {
+
+    .row-banner {
+        background: url(../images/row-banner.png) no-repeat;
+        height: 45rem;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+
+            span {
+                @include font(4rem);
+                color: $black;
+            }
+
+            h3 {
+                font-size: 6rem;
+                color: red;
+            }
+
+            p {
+                font-size: 2rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .grid-banner {
+        @include grid(30rem);
+
+        .grid {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 45rem;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                position: absolute;
+                top: 2rem;
+                padding: 0 2rem;
+
+                &.center {
+                    text-align: center;
+                    width: 100%;
+
+                    span {
+                        color: $light-color;
+                    }
+
+                    h3 {
+                        color: $black;
+                    }
+                }
+
+                span {
+                    font-size: 2.5rem;
+                    color: $white;
+                }
+
+                h3 {
+                    font-size: 3rem;
+                    color: $white;
+                    padding-top: .5rem;
+                }
+
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.menu {
+
+    .box-container {
+        @include grid(30rem);
+
+        .box {
+            border-radius: .5rem;
+            background-color: $light-bg;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            &:hover {
+                background-color: $black;
+
+                .content h3 {
+                    color: $white;
+                }
+            }
+
+            img {
+                height: 10rem;
+            }
+
+            .content {
+
+                h3 {
+                    font-size: 2rem;
+                    color: $black;
+                    padding-bottom: .5rem;
+                }
+
+                .price {
+                    font-size: 1.8rem;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// order
+
+.order {
+
+    .icons-container {
+        @include grid(30rem);
+        margin-bottom: 2rem;
+
+        .box {
+            border-radius: .5rem;
+            text-align: center;
+            padding: 2rem;
+            background-color: $light-bg;
+
+            img {
+                height: 10rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                color: $black;
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    form {
+
+        background-color: $light-bg;
+        padding: 2rem;
+        border-radius: .5rem;
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .inputBox {
+                width: 49%;
+                padding: .7rem 0;
+
+                label {
+                    font-size: 1.7rem;
+                    color: $light-color;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 1rem 1.2rem;
+                    border-radius: .5rem;
+                    font-size: 1.6rem;
+                    text-transform: none;
+                    color: $black;
+                    margin-top: .5rem;
+                }
+
+                textarea {
+                    height: 20rem;
+                    resize: none;
+                }
+
+                .map {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: .5rem;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+// blog
+
+.blog {
+
+    .blog-container {
+        @include grid(30rem);
+
+        .box {
+            overflow: hidden;
+            position: relative;
+            border-radius: .5rem;
+            background-color: $light-bg;
+
+            &:hover {
+                .image {
+
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .date {
+                    left: 1.5rem;
+                }
+
+            }
+
+            .date {
+                position: absolute;
+                background-color: $white;
+                padding: .5rem 1rem;
+                top: 1rem;
+                left: -100%;
+                border-radius: .5rem;
+                z-index: 10;
+
+                i {
+                    color: $green;
+                    font-size: 1.6rem;
+                    padding-right: .5rem;
+                }
+
+                span {
+                    color: $black;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+
+            .image {
+                overflow: hidden;
+                height: 25rem;
+                width: 100%;
+
+                img {
+                    border-radius: .5rem;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .content-box {
+                padding: 1.5rem 2rem;
+
+                .links {
+                    padding-bottom: 1rem;
+
+                    a {
+
+                        &:hover span {
+                            color: $green;
+                        }
+
+                        i {
+                            font-size: 1.7rem;
+                            color: $green;
+                            margin-right: .7rem;
+                        }
+
+                        span {
+                            font-size: 1.4rem;
+                            color: $light-color;
+                            margin-right: .7rem;
+                        }
+                    }
+                }
+
+                .content {
+
+                    h3 {
+                        font-size: 2rem;
+                        color: $black;
+                        // padding-bottom: .5rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        color: $light-color;
+                        padding: 1rem 0;
+                        line-height: 2;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// footer
+
+.footer {
+    background-color: $light-bg;
+
+    .Newsletter {
+        text-align: center;
+        font-size: 2.5rem;
+        color: $black;
+    }
+
+    form {
+        // width: 70rem;
+        margin: 1rem auto;
+        max-width: 70rem;
+        display: flex;
+
+        input[type="email"] {
+            height: 100%;
+            width: 100%;
+            padding: 1rem 1.2rem;
+            font-size: 1.6rem;
+            color: $black;
+            text-transform: none;
+            border-radius: .5rem;
+            // overflow: hidden;    
+        }
+
+        input[type="submit"] {
+            padding: 0 2rem;
+            font-size: 1.6rem;
+            color: $white;
+            background-color: $green;
+            cursor: pointer;
+            border-radius: .5rem;
+
+            &:hover {
+                background-color: $black;
+            }
+        }
+    }
+
+    .box-container {
+        @include grid(25rem);
+
+        .box {
+
+            h3 {
+                font-size: 2.2rem;
+                color: $black;
+                padding: 1rem 0;
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: $light-color;
+                padding: 1rem 0;
+            }
+
+            a {
+                display: block;
+                font-size: 1.4rem;
+                color: $light-color;
+                padding: 1rem 0;
+
+                &:hover {
+                    color: $green;
+
+                    i {
+                        padding-right: 2rem;
+                    }
+                }
+
+                i {
+                    padding-right: .5rem;
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        padding-top: 1rem;
+        text-align: center;
+
+        .social {
+            margin: 1.5rem 0;
+
+            a {
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4.5rem;
+                font-size: 2rem;
+                border-radius: .5rem;
+                color: $white;
+                background-color: $green;
+                margin: 0 .3rem;
+
+                &:hover {
+                    background-color: $black;
+                }
+            }
+        }
+
+        .copy-right {
+            font-size: 2rem;
+            color: $light-color;
+            padding: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// media queries 
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: $white;
+        border-top: $border;
+        border-bottom: $border;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        &.active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        a {
+            font-size: 2rem;
+            margin: 2rem;
+            display: block;
+        }
+    }
+
+    .home {
+        .right-side {
+            .home-parallax {
+                top: 0;
+                right: 0;
+                width: 130%;
+            }
+        }
+    }
+
+    .order form .flex .inputBox {
+        width: 100%;
+    }
+
+
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .home .left-side {
+        h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+
+}

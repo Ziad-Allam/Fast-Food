@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-utensils"></i>fast food </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#popular">Popular</a>
+            <a href="#menu">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- search -->
+    <section class="search-container">
+
+        <form action="">
+            <input type="search" placeholder="search here..." id="search-box">
+            <!-- <div id="search-btn" class="fas fa-search"></div> -->
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- cart -->
+
+    <section class="shopping-cart-container">
+
+        <div class="products-container">
+            <h3 class="order-header">your order</h3>
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./images/menu-1.png" alt="">
+                    <div class="content">
+                        <h3>Delicious Food</h3>
+                        <div class="quantity-box">
+                            <span>quantity :</span>
+                            <input type="number" value="1">
+                        </div>
+                        <div class="price-box">
+                            <span>price :</span>
+                            <span>$40.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./images/menu-2.png" alt="">
+                    <div class="content">
+                        <h3>Delicious Food</h3>
+                        <div class="quantity-box">
+                            <span>quantity :</span>
+                            <input type="number" value="1">
+                        </div>
+                        <div class="price-box">
+                            <span>price :</span>
+                            <span>$40.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./images/menu-3.png" alt="">
+                    <div class="content">
+                        <h3>Delicious Food</h3>
+                        <div class="quantity-box">
+                            <span>quantity :</span>
+                            <input type="number" value="1">
+                        </div>
+                        <div class="price-box">
+                            <span>price :</span>
+                            <span>$40.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-times"></i>
+                    <img src="./images/menu-4.png" alt="">
+                    <div class="content">
+                        <h3>Delicious Food</h3>
+                        <div class="quantity-box">
+                            <span>quantity :</span>
+                            <input type="number" value="1">
+                        </div>
+                        <div class="price-box">
+                            <span>price :</span>
+                            <span>$40.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <h3 class="cart-heading">cart total</h3>
+            <div class="box">
+                <h3 class="subtotal">subtotal : <span>$200.00</span> </h3>
+                <h3 class="total">total : <span>$200.00</span> </h3>
+                <a href="#" class="btn">proceed to checkout</a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- login -->
+
+    <div class="login-container">
+
+        <form action="">
+            <h3>login</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login now" class="btn">
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">create one</a></p>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- home section -->
+
+    <section class="home" id="home">
+
+        <div class="left-side">
+            <span>Welcome Foodies</span>
+            <h3>Different Spices For The Different Tastes 😋</h3>
+            <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Omnis Unde Dolores Temporibus Hic Quam Debitis
+                Tenetur Harum Nemo.</p>
+            <button class="btn">Order Now</button>
+        </div>
+
+        <div class="right-side">
+            <img src="./images/home-img.png" alt="" class="home-img">
+            <img src="./images/home-parallax-img.png" alt="" class="home-parallax">
+        </div>
+
+    </section>
+
+
+
+
+    <!-- CATEGORY SECTION -->
+
+    <section class="category">
+
+        <a href="#" class="box">
+            <img src="./images/cat-1.png" alt="">
+            <h3>Combo</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./images/cat-2.png" alt="">
+            <h3>Pizza</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./images/cat-3.png" alt="">
+            <h3>Burger</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./images/cat-4.png" alt="">
+            <h3>Chicken</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./images/cat-5.png" alt="">
+            <h3>Dinner</h3>
+        </a>
+        <a href="#" class="box">
+            <img src="./images/cat-6.png" alt="">
+            <h3>Coffee</h3>
+        </a>
+
+    </section>
+
+
+
+
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+        <!-- left side -->
+        <div class="about-left-side">
+            <img src="./images/about-img.png" alt="" class="about-img">
+        </div>
+
+        <!-- right side -->
+        <div class="about-right-side">
+            <span>Why Choose Us?</span>
+            <h3>What's Make Our Food Delicious!</h3>
+            <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Eos Ut Explicabo, Numquam Iusto Est A Ipsum
+                Assumenda Tempore Esse Corporis?</p>
+            <a href="#" class="btn">Read More</a>
+
+            <div class="about-services">
+                <div>
+                    <img src="./images/serv-1.png" alt="">
+                    <p>Fast Delivery</p>
+                </div>
+                <div>
+                    <img src="./images/serv-2.png" alt="">
+                    <p>Fresh Food</p>
+                </div>
+                <div>
+                    <img src="./images/serv-3.png" alt="">
+                    <p>Best Quality</p>
+                </div>
+                <div>
+                    <img src="./images/serv-4.png" alt="">
+                    <p>24/7 Support</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <section class="popular" id="popular">
+        <div class="heading">
+            <span>Popular Food</span>
+            <h3>Our Special Dishes</h3>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$35.00 <span>$50.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>cheesy burger</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$50.00 <span>$60.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>pizza</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$40.00 <span>$50.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>new burger</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$55.00 <span>$70.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>chicken pizza </h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$20.00 <span>$30.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>beef pizza</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$35.00 <span>$45.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-7.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>regular pizza</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$15.00 <span>$20.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <a href="#" class="fas fa-heart"></a>
+                <div class="image">
+                    <img src="./images/food-8.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>hotdog pizza</h3>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="price">$20.00 <span>$25.00</span></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- banner -->
+
+    <section class="banner">
+
+        <div class="row-banner">
+            <div class="content">
+                <span>Double Cheese</span>
+                <h3>BURGER</h3>
+                <p>With Cococola And Fries</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div class="grid-banner">
+            <div class="grid">
+                <img src="./images/banner-1.png" alt="">
+                <div class="content">
+                    <span>Special Offer</span>
+                    <h3>Upto 50% Off</h3>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <div class="grid ">
+                <img src="./images/banner-2.png" alt="">
+                <div class="content center">
+                    <span>Special Offer</span>
+                    <h3>Upto 50% Off</h3>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <div class="grid">
+                <img src="./images/banner-3.png" alt="">
+                <div class="content">
+                    <span>Special Offer</span>
+                    <h3>Upto 50% Off</h3>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- menu -->
+
+    <section class="menu" id="menu">
+
+        <div class="heading">
+            <span>Our Menu</span>
+            <h3>Our Top Dishes</h3>
+        </div>
+
+        <div class="box-container">
+            <a href="#" class="box">
+                <img src="./images/menu-1.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="./images/menu-2.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="./images/menu-3.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="./images/menu-4.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="./images/menu-5.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="./images/menu-6.png" alt="">
+                <div class="content">
+                    <h3>Delicious Food</h3>
+                    <span class="price">$40.00</span>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- order -->
+
+    <section class="order" id="order">
+
+        <div class="heading">
+            <span>Order Now</span>
+            <h3>Fastest Home Delivery</h3>
+        </div>
+
+        <div class="icons-container">
+
+            <div class="box">
+                <img src="./images/icon-1.png" alt="">
+                <h3>7:00am To 10:30pm</h3>
+            </div>
+            <div class="box">
+                <img src="./images/icon-2.png" alt="">
+                <h3>+123-456-7890</h3>
+            </div>
+            <div class="box">
+                <img src="./images/icon-3.png" alt="">
+                <h3>Mumbai, India - 400104</h3>
+            </div>
+
+        </div>
+
+        <form action="">
+
+            <div class="flex">
+                <div class="inputBox">
+                    <label for="your name">Your Name</label>
+                    <input type="text" placeholder="write your name here">
+                </div>
+                <div class="inputBox">
+                    <label for="your number">Your Number</label>
+                    <input type="number" placeholder="write your number here">
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="inputBox">
+                    <label for="your order">Your Order</label>
+                    <input type="text" placeholder="food you want">
+                </div>
+                <div class="inputBox">
+                    <label for="how much">How Much</label>
+                    <input type="number" placeholder="number or orders">
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="inputBox">
+                    <label for="your details">Your Details</label>
+                    <input type="text" placeholder="your message">
+                </div>
+                <div class="inputBox">
+                    <label for="pick up time">Pick Up Time</label>
+                    <input type="datetime-local" placeholder="">
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="inputBox">
+                    <textarea placeholder="your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="inputBox">
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26359832.842849046!2d-113.72795382611162!3d36.24549287140904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2seg!4v1665191444614!5m2!1sen!2seg"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <input type="submit" value="proceed to order" class="btn">
+
+        </form>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- blog -->
+
+    <section class="blog" id="blog">
+
+        <div class="heading">
+            <span>Our Blogs</span>
+            <h3>Our Daily Stories</h3>
+        </div>
+
+        <div class="blog-container">
+            <div class="box">
+                <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>21st May, 2021</span>
+                </div>
+                <div class="image">
+                    <img src="images/blog-1.jpg" alt="">
+                </div>
+                <div class="content-box">
+                    <div class="links">
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Food /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Burger /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Pizza</span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3>Blog Title Goes Here...</h3>
+                        <p>Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem, Earum.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>21st May, 2021</span>
+                </div>
+                <div class="image">
+                    <img src="images/blog-2.jpg" alt="">
+                </div>
+                <div class="content-box">
+                    <div class="links">
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Food /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Burger /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Pizza</span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3>Blog Title Goes Here...</h3>
+                        <p>Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem, Earum.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>21st May, 2021</span>
+                </div>
+                <div class="image">
+                    <img src="images/blog-3.jpg" alt="">
+                </div>
+                <div class="content-box">
+                    <div class="links">
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Food /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Burger /</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>Pizza</span>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3>Blog Title Goes Here...</h3>
+                        <p>Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Autem, Earum.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+
+    <footer class="footer">
+
+        <section>
+
+            <h3 class="Newsletter">Newsletter</h3>
+
+            <form action="">
+                <input type="email" placeholder="enter your email">
+                <input type="submit" value="subscribe">
+            </form>
+
+            <div class="box-container">
+                <div class="box">
+                    <h3>our menu</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> pizza</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> burger</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> chicken</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> pasta</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> and more...</a>
+
+                </div>
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#home"> <i class="fas fa-arrow-right"></i> Home</a>
+                    <a href="#about"> <i class="fas fa-arrow-right"></i> About</a>
+                    <a href="#popular"> <i class="fas fa-arrow-right"></i> Popular</a>
+                    <a href="#menu"> <i class="fas fa-arrow-right"></i> Menu</a>
+                    <a href="#order"> <i class="fas fa-arrow-right"></i> Order</a>
+                    <a href="#blogs"> <i class="fas fa-arrow-right"></i> Blogs</a>
+                </div>
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my order</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my account</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my favorite</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> terms of use</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> policy</a>
+                </div>
+                <div class="box">
+                    <h3>opening hours</h3>
+                    <p>Monday : 7:00am To 10:00pm</p>
+                    <p>Tuesday : 7:00am To 10:00pm</p>
+                    <p>Wednesday : 7:00am To 10:00pm</p>
+                    <p>Friday : 7:00am To 10:00pm</p>
+                    <p>Saturday And Sunday Closed</p>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-pinterest"></a>
+                </div>
+                <div class="copy-right">
+                    <p>All Rights Reserved!</p>
+                </div>
+            </div>
+
+        </section>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
